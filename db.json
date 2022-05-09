@@ -1,0 +1,76 @@
+{
+    "trails": [
+      {
+        "id": 1,
+        "name": "Appalachian Trail",
+        "image": "https://faroutguides.com/wp-content/uploads/2018/05/AT_Map_v2-e1564591310715.png",
+        "description": "",
+        "length": "2190 mi",
+        "comments": [],
+        "likes": 0
+      },
+      {
+        "id": 2,
+        "name": "Continental Divide",
+        "image": "https://faroutguides.com/wp-content/uploads/2018/05/CDT_Map-e1564591257520.png",
+        "description": "",
+        "length": "3100 mi",
+        "comments": [],
+        "likes": 8
+      },
+      {
+        "id": 3,
+        "name": "Pacific Crest Trail",
+        "image": "https://faroutguides.com/wp-content/uploads/2018/05/PCT_Map-e1564590837266.png",
+        "description": "",
+        "length": "650 mi",
+        "comments": [],
+        "likes": 8
+      },
+      {
+        "id": 4,
+        "name": "Oregon Desert Trail ",
+        "image": "https://www.longdistancehiker.com/wp-content/uploads/2019/08/ODT-Map-logo.jpg",
+        "description": "",
+        "length": "750 mi",
+        "comments": [],
+        "likes": 8
+      },
+      {
+        "id": 5,
+        "name": "Hokkaido Nature Trail",
+        "image": "https://walkjapan.com/application/files/2614/7702/0887/HH_Map_2016low.jpg",
+        "description": "",
+        "length": "2848 mi",
+        "comments": [],
+        "likes": 8
+      },
+      {
+        "id": 6,
+        "name": "Grand Italian Trail",
+        "image": "https://www.dolomitiunesco.info/wp-content/uploads/2020/02/mappa-sentiero-italia-8gennaio2019.png",
+        "description": "",
+        "length": "3831 mi",
+        "comments": [],
+        "likes": 8
+      },
+      {
+        "name": "new trail",
+        "image": "",
+        "description": "this trail was sick",
+        "length": "69",
+        "comments": [],
+        "likes": 0,
+        "id": 7
+      },
+      {
+        "name": "another new trail",
+        "image": "",
+        "description": "words",
+        "length": "69",
+        "comments": [],
+        "likes": 0,
+        "id": 8
+      }
+    ]
+  }
