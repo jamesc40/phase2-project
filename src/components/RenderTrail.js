@@ -49,6 +49,7 @@ export default function RenderTrail() {
                         <p>Description: {description}</p>
                         <button onClick={handleClick}>Likes: {likes}</button>
                         <p>Comments:</p>
+
                 </div>
          )
 }
