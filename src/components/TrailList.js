@@ -9,7 +9,7 @@ export default function TrailList({ trails }) {
   const handleSetSort = (e) => setSort(e.target.value)
   
   useEffect(() => {
-    sort === 'default' ?  setRender(trails) : setRender([...trails].sort((a, b) => a[sort] - b[sort]))
+        sort === 'default' ?  setRender(trails) : setRender([...trails].sort((a, b) => b[sort] - a[sort]))
   }, [trails, sort])
   
     return (
@@ -17,13 +17,13 @@ export default function TrailList({ trails }) {
         <Sort 
             sort={sort} 
             handleSetSort={handleSetSort}  
-            />
+        />
         {renderedTrails.map(trail => ( 
             <TrailItem 
                 key={ trail.id }
                 trail={ trail } 
             />
-            ))}
+        ))}
       </div>
       )
   }
