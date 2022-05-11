@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { URL } from './App';
+import CommentForm from './CommentForm';
 
 export default function RenderTrail() {
          const { id } = useParams();
@@ -36,8 +37,17 @@ export default function RenderTrail() {
                 })
         }
 
+         // 2. FORM RELATED THINGS
+         // updates trail’s comment key via commentState
 
-        if(!trail) return <h1>Loading...</h1>
+         function handleComments(commentState) {
+          setTrail({ ...trail, comments: [...trail.comments, commentState] });
+         }
+
+         // patches  updated trail to backend
+         useEffect(() => {
+             handlePatch({ comments: trail.comments });
+         }, [trail.comments]);
 
         const { name, likes, length, image, description, comments } = trail        
         
@@ -49,6 +59,14 @@ export default function RenderTrail() {
                         <p>Description: {description}</p>
                         <button onClick={handleClick}>Likes: {likes}</button>
                         <p>Comments:</p>
+                         <ul>
+                             {comments !== undefined
+                                    ? comments.map((comment, index) => {
+                                       return <li key={index}>{comment}</li>;
+                                       })
+                              : null}
+      </ul>
+      <CommentForm comments={comments} handleComments={handleComments} />
 
                 </div>
          )

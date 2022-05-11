@@ -8,7 +8,8 @@ import Home from './Home'
 
 export const URL = 'http://localhost:3000/trails'
 
-function App() { const [trails, setTrails] = useState([])
+function App() { 
+   const [trails, setTrails] = useState([])
   
   useEffect(() => {
    fetch(URL)
@@ -22,25 +23,20 @@ function App() { const [trails, setTrails] = useState([])
       <div className="App">
          <NavBar /> 
          <Switch>
-
             <Route exact path='/'>
                <Home />
             </Route>
-        
             <Route exact path='/traillist'>
                <TrailList
                   trails={ trails } 
                />
             </Route>
-
             <Route path='/traillist/:id'>
                <RenderTrail  />
             </Route>
-
             <Route path='/form'>
                <Form handleSetTrails={handleSetTrails}/>
             </Route>
-            
          </Switch>
     </div>
   );
