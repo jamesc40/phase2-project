@@ -2,6 +2,9 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { URL } from './App';
 import CommentForm from './CommentForm';
+import Button from 'react-bootstrap/Button'
+import Card from "react-bootstrap/Card";
+import Container from 'react-bootstrap/Container';
 
 export default function RenderTrail() {
          const { id } = useParams();
@@ -12,8 +15,6 @@ export default function RenderTrail() {
                 .then(r => r.json())
                 .then(data => setTrail(data))
          }, [id])
-        
-
 
         const handleSetTrail = (updatedTrail) => setTrail(updatedTrail)
 
@@ -40,9 +41,7 @@ export default function RenderTrail() {
          // 2. FORM RELATED THINGS
          // updates trail’s comment key via commentState
 
-         function handleComments(commentState) {
-          setTrail({ ...trail, comments: [...trail.comments, commentState] });
-         }
+         const handleComments = (commentState) => setTrail({ ...trail, comments: [...trail.comments, commentState] })
 
          // patches  updated trail to backend
          useEffect(() => {
@@ -52,22 +51,37 @@ export default function RenderTrail() {
         const { name, likes, length, image, description, comments } = trail        
         
          return(
-                <div>
-                        <h1>{name}</h1>
-                        <img src={image} alt={name} className='map'/>
-                        <p>Length: {length} miles</p>
-                        <p>Description: {description}</p>
-                        <button onClick={handleClick}>Likes: {likes}</button>
-                        <p>Comments:</p>
-                         <ul>
-                             {comments !== undefined
-                                    ? comments.map((comment, index) => {
-                                       return <li key={index}>{comment}</li>;
-                                       })
-                              : null}
-      </ul>
-      <CommentForm comments={comments} handleComments={handleComments} />
+                <Container>
+                        <Card className='text-center' style={{ width: '100rem' }}>
+                           <Card.Body>
+                              <Card.Title>{name}</Card.Title>
+                              <Card.Img src={image} /> 
+                              <Card.Text>
+                                 {length} miles
+                                 {description}
+                              </Card.Text>
 
-                </div>
+                              <Button variant='primary'className='mb-2' onClick={handleClick}>
+                                 {likes}  👍
+                              </Button>
+                           </Card.Body>
+                        </Card>
+
+                        <Card style={{ width: '100rem' }}> 
+                           <Card.Body>
+                              <CommentForm comments={comments} handleComments={handleComments} />
+                              <Card.Text className='mt-3'>
+                                 {comments !== undefined ? 'Comments:' : null}
+                              </Card.Text>
+                              <ul>
+                                {comments !== undefined
+                                 ? comments.map((comment, index) => {
+                                    return <li key={index}>{comment}</li>;
+                                    })
+                                 : null}
+                              </ul>
+                           </Card.Body>
+                        </Card>
+                </Container>
          )
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import TrailItem from './TrailItem';
 import Sort from './Sort';
+import Container from 'react-bootstrap/Container';
 
 export default function TrailList({ trails }) {
   const [renderedTrails, setRender] = useState([]);
@@ -9,22 +10,22 @@ export default function TrailList({ trails }) {
   const handleSetSort = (e) => setSort(e.target.value)
   
   useEffect(() => {
-        sort === 'default' ?  setRender(trails) : setRender([...trails].sort((a, b) => b[sort] - a[sort]))
+      let row = []
+      let tempArr = sort === 'default' ?  trails : [...trails].sort((a, b) => b[sort] - a[sort])
+      let mapArr = tempArr.map((trail, index) => (<TrailItem key={trail.id} trail={trail}/>))
+      while (mapArr.length > 0) {
+        row.push(<div className='row' key={mapArr.length}>{mapArr.splice(0, 2)}</div>)
+      } setRender(row)
   }, [trails, sort])
-  
+
     return (
-      <div>
-        <Sort 
+       <Container>
+         <Sort 
             sort={sort} 
             handleSetSort={handleSetSort}  
-        />
-        {renderedTrails.map(trail => ( 
-            <TrailItem 
-                key={ trail.id }
-                trail={ trail } 
-            />
-        ))}
-      </div>
+         />
+            {renderedTrails}
+      </Container>
       )
   }
-  
+ 

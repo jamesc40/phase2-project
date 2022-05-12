@@ -1,6 +1,7 @@
 import { useState } from 'react';
 // import { useHistory } from 'react-router-dom';
 import { URL } from './App';
+import Container from 'react-bootstrap/Container';
 
 const emptyObj = 
   {
@@ -33,49 +34,53 @@ export default function Form({ handleSetTrails }){
   }
 
     return (
-      <div>
-	<form onSubmit={onFormSubmit}>
-	  <label>Name of Trail: </label>
-	  <input 
-	  	type='text'
-	  	name='name'
-	  	value={formData.name} 
-	  	placeholder='name of trail' 
-	  	onChange={handleFormChange}
-	  />
-	  <br /><br />
-
-	  <label>Length of Trail: </label>
-	  <input 
-	  	type='number' 
-	  	name='length' 
-	  	value={formData.length} 
-	  	placeholder='length of trail' 
-	  	onChange={handleFormChange}
-	  />
-	  <br /><br />
-
-	  <label>Description of Trail: </label>
-	  <input 
-	  	type='text' 
-	  	name='description'  
-	  	value = {formData.description} 
-	  	placeholder='description' 
-	  	onChange={handleFormChange}
-	  />
-	  <br /><br />
-		  
-	  <label>Map of Trail: </label>
-	  <input 
-	  	type='text' 
-	  	name='image' 
-	  	value={formData.image} 
-	  	placeholder='image goes here' 
-	  	onChange={handleFormChange}
-	  />
-	  <button type='submit'>submit</button>
-	</form>
-      </div>
+      <Container>
+         <form onSubmit={onFormSubmit}>
+            <div className='form-group'>
+               <label>Name of Trail: </label>
+               <input 
+                  type='text'
+                  name='name'
+                  value={formData.name} 
+                  placeholder='...' 
+                  onChange={handleFormChange}
+                  className='form-text mb-3'
+               />
+               <label>Length of Trail: </label>
+               <input 
+                  type='number' 
+                  name='length' 
+                  value={formData.length} 
+                  placeholder='...' 
+                  onChange={handleFormChange}
+                  className='form-text mb-3'
+               />
+              <label>Description of Trail: </label>
+              <input 
+                  type='text' 
+                  name='description'  
+                  value = {formData.description} 
+                  placeholder='...' 
+                  onChange={handleFormChange}
+                  className='form-text mb-3'
+              />
+              <label>Map of Trail: </label>
+              <input 
+                  type='text' 
+                  name='image' 
+                  value={formData.image} 
+                  placeholder='...' 
+                  onChange={handleFormChange}
+                  className='form-text mb-3'
+              />
+               <button 
+                  type='submit' 
+                  className='btn btn-light'>
+                     submit
+               </button>
+            </div>
+         </form>
+   </Container>
     )
   }
   
