@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Appalachian Trail",
       "image": "https://faroutguides.com/wp-content/uploads/2018/05/AT_Map_v2-e1564591310715.png",
-      "description": "",
+      "description": "The Appalachian Trail is a 2,180+ mile long public footpath that traverses the scenic, wooded, pastoral, wild, and culturally resonant lands of the Appalachian Mountains.",
       "length": 2190,
       "comments": [
         "adsfadf",
@@ -17,7 +17,7 @@
       "id": 2,
       "name": "Continental Divide",
       "image": "https://faroutguides.com/wp-content/uploads/2018/05/CDT_Map-e1564591257520.png",
-      "description": "",
+      "description": "The Continental Divide National Scenic Trail (CDT) is one of the most significant trail systems in the world. Established by Congress in 1978, it spans 3,100 miles between Mexico and Canada, traverses five states and connects countless communities along the spine of the Rocky Mountains.",
       "length": 3100,
       "comments": [],
       "likes": 8
@@ -26,25 +26,32 @@
       "id": 3,
       "name": "Pacific Crest Trail",
       "image": "https://faroutguides.com/wp-content/uploads/2018/05/PCT_Map-e1564590837266.png",
-      "description": "",
-      "length": 650,
-      "comments": [],
-      "likes": 18
+      "description": "Pacific Crest Trail, in full Pacific Crest National Scenic Trail, wilderness footpath and equestrian trail in the western United States. It extends from north to southeast some 2,650 miles (4,265 km), from the border of Canada near Castle Peak, northern Washington, to the border of Mexico near Campo, California.",
+      "length": 2650,
+      "comments": [
+        "adf",
+        "asdf",
+        "adf"
+      ],
+      "likes": 37
     },
     {
       "id": 4,
       "name": "Oregon Desert Trail ",
       "image": "https://www.longdistancehiker.com/wp-content/uploads/2019/08/ODT-Map-logo.jpg",
-      "description": "",
+      "description": "The Oregon Desert Trail is a 750-mile route located on public land and public rights-of-way that stitches existing hiking trails, old Jeep tracks, and historical wagon roads together with long stretches of cross-country travel.",
       "length": 750,
-      "comments": [],
+      "comments": [
+        "new",
+        "new"
+      ],
       "likes": 8
     },
     {
       "id": 5,
       "name": "Hokkaido Nature Trail",
       "image": "https://walkjapan.com/application/files/2614/7702/0887/HH_Map_2016low.jpg",
-      "description": "",
+      "description": "The Hokkaido Hike is a fully-guided tour for those who exercise fairly regularly and can walk comfortably for up to eight hours a day. The route is largely on mountain trails and includes some long ascents and descents over rough ground.",
       "length": 2848,
       "comments": [],
       "likes": 26
@@ -53,28 +60,19 @@
       "id": 6,
       "name": "Grand Italian Trail",
       "image": "https://www.dolomitiunesco.info/wp-content/uploads/2020/02/mappa-sentiero-italia-8gennaio2019.png",
-      "description": "",
+      "description": "The Grand Italian Trail (Italian: Sentiero Italia) is a 6166-kilometer-long hiking trail that crosses the entire territory of Italy, passing through six UNESCO Heritage Sites, 15 national parks, and many other parks and nature reserves.",
       "length": 3831,
       "comments": [],
       "likes": 8
     },
     {
-      "name": "new trail",
+      "name": "adsfa",
       "image": "",
-      "description": "this trail was sick",
-      "length": 69,
+      "description": "asdf",
+      "length": "90",
       "comments": [],
       "likes": 0,
       "id": 7
-    },
-    {
-      "name": "another new trail",
-      "image": "",
-      "description": "words",
-      "length": 69,
-      "comments": [],
-      "likes": 5,
-      "id": 8
     }
   ]
 }

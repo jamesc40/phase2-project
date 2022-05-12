@@ -1,5 +1,5 @@
 import { useState } from 'react';
-// import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { URL } from './App';
 import Container from 'react-bootstrap/Container';
 
@@ -15,6 +15,7 @@ const emptyObj =
 
 export default function Form({ handleSetTrails }){
   const [formData, setFormData] = useState({...emptyObj});
+  const history = useHistory();
 
   const handleFormChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value }); 
   
@@ -23,12 +24,15 @@ export default function Form({ handleSetTrails }){
     fetch(URL, {
       method: 'POST',
       headers: {
-	'content-type': 'application/json'
+        'content-type': 'application/json'
       },
       body: JSON.stringify(formData)
     }) 
     .then(r => r.json())
-    .then(handleSetTrails)
+        .then(data => {
+           handleSetTrails(data)
+           history.push(`/traillist/${data.id}`)
+        })
 
     setFormData({ ...emptyObj })
   }
@@ -44,7 +48,7 @@ export default function Form({ handleSetTrails }){
                   value={formData.name} 
                   placeholder='...' 
                   onChange={handleFormChange}
-                  className='form-text mb-3'
+                  className='form-control mb-3'
                />
                <label>Length of Trail: </label>
                <input 
@@ -53,7 +57,7 @@ export default function Form({ handleSetTrails }){
                   value={formData.length} 
                   placeholder='...' 
                   onChange={handleFormChange}
-                  className='form-text mb-3'
+                  className='form-control mb-3'
                />
               <label>Description of Trail: </label>
               <input 
@@ -62,7 +66,7 @@ export default function Form({ handleSetTrails }){
                   value = {formData.description} 
                   placeholder='...' 
                   onChange={handleFormChange}
-                  className='form-text mb-3'
+                  className='form-control mb-3'
               />
               <label>Map of Trail: </label>
               <input 
@@ -71,7 +75,7 @@ export default function Form({ handleSetTrails }){
                   value={formData.image} 
                   placeholder='...' 
                   onChange={handleFormChange}
-                  className='form-text mb-3'
+                  className='form-control mb-3'
               />
                <button 
                   type='submit' 
