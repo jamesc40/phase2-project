@@ -9,9 +9,12 @@
       "comments": [
         "adsfadf",
         "fafgs",
+        "new",
+        "another one",
+        "asdfasdf",
         "new"
       ],
-      "likes": 8
+      "likes": 12
     },
     {
       "id": 2,
@@ -64,26 +67,10 @@
       "image": "https://www.dolomitiunesco.info/wp-content/uploads/2020/02/mappa-sentiero-italia-8gennaio2019.png",
       "description": "The Grand Italian Trail (Italian: Sentiero Italia) is a 6166-kilometer-long hiking trail that crosses the entire territory of Italy, passing through six UNESCO Heritage Sites, 15 national parks, and many other parks and nature reserves.",
       "length": 3831,
-      "comments": [],
+      "comments": [
+        "comment"
+      ],
       "likes": 8
-    },
-    {
-      "name": "adsfa",
-      "image": "",
-      "description": "asdf",
-      "length": "90",
-      "comments": [],
-      "likes": 0,
-      "id": 7
-    },
-    {
-      "name": "adsfa",
-      "image": "",
-      "description": "adsfafa",
-      "length": "69",
-      "comments": [],
-      "likes": 0,
-      "id": 8
     }
   ]
 }

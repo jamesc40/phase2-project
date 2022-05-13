@@ -26,20 +26,16 @@ export default function RenderTrail() {
   const handleComments = (commentState) => setTrail({ ...trail, comments: [...trail.comments, commentState] })
 
   useEffect(() => {
-   if (counter.current > 1) {
-     handlePatch(trail)
-   } else counter.current = counter.current + 1
-  }, [trail])
-
-  const handlePatch = (update) => {
-    fetch(`${URL}/${id}`, {
+    if (counter.current > 1) {
+      fetch(`${URL}/${id}`, {
       method: 'PATCH',
       headers: {
         'content-type': 'application/json'
       },
-      body: JSON.stringify(update)
+      body: JSON.stringify(trail)
     })
-  }
+    } else counter.current = counter.current + 1
+  }, [id, trail])
 
   if(trail.comments === undefined) return <h1> Loading... </h1>
   const { name, likes, length, image, description, comments } = trail        
