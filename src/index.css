@@ -1,4 +1,31 @@
-.map {
-  width:540px; /* you can use % */
-  height: auto;
+.bg {
+  background-image: url('https://blog-assets.thedyrt.com/uploads/2019/06/shutterstock_75803032-1.jpg');
+  height: 100vh;
+  /* background-position: center; */
+  background-repeat: repeat;
+  /* background-size: cover; */
+  position: relative;
+  background-attachment: fixed;
+}
+#home-btn {
+  background-color: whitesmoke;
+  width: 340px;
+  color:rgba(157, 49, 49, 0.919);
+  font-size: 30px;
+}
+#intro-parent-div{
+  justify-items: center;
+}
+#intro-div{
+  background-color: rgba(244, 244, 244, 0.78);
+  width: 600px;
+  /* height: 375px */
+  margin: 0 auto;
+  /* border:rgba(157, 49, 49, 0.654) solid; */
+  border-radius: 25px;
+}
+#intro-p{
+  margin-bottom: 200px;
+  font-size: 30px;
+  color:rgba(157, 49, 49, 0.919) ;
 }
