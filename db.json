@@ -19,8 +19,10 @@
       "image": "https://faroutguides.com/wp-content/uploads/2018/05/CDT_Map-e1564591257520.png",
       "description": "The Continental Divide National Scenic Trail (CDT) is one of the most significant trail systems in the world. Established by Congress in 1978, it spans 3,100 miles between Mexico and Canada, traverses five states and connects countless communities along the spine of the Rocky Mountains.",
       "length": 3100,
-      "comments": [],
-      "likes": 8
+      "comments": [
+        "adsfa"
+      ],
+      "likes": 10
     },
     {
       "id": 3,
@@ -73,6 +75,15 @@
       "comments": [],
       "likes": 0,
       "id": 7
+    },
+    {
+      "name": "adsfa",
+      "image": "",
+      "description": "adsfafa",
+      "length": "69",
+      "comments": [],
+      "likes": 0,
+      "id": 8
     }
   ]
 }
